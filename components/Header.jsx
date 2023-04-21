@@ -32,6 +32,39 @@ const Header = () => {
                     showCatMenu={showCatMenu}
                     setShowCatMenu={setShowCatMenu}
                 />
+
+                <div className='flex items-center gap-2 text-black'>
+                    {/* icons start point  */}
+                    <div className='w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative'>
+                        <IoMdHeartEmpty className='text-[19px] md:text-[24px]' />
+                        <div className='h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-amber-700 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]'>51</div>
+                    </div>
+                    {/* icons end point  */}
+
+                    {/* icon start point  */}
+                    <div className='w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative'>
+                        <BsCart className='text-[15px] md:text-[20px]' />
+                        <div className='h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-amber-700 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]'>5</div>
+                    </div>
+                    {/* icon end point  */}
+
+
+                    <div className='w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2'>
+                        {mobileMenu ? (
+                            <VscChromeClose
+                                className='text-[16px]'
+                                onClick={() => setMobileMenu
+                                    (false)}
+                            />
+                        ) : (
+                            <BiMenuAltRight
+                                className='text-[22px]'
+                                onClick={() => setMobileMenu
+                                    (true)}
+                            />
+                        )}
+                    </div>
+                </div>
             </Wrapper>
         </header>
     )
